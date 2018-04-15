@@ -38,14 +38,19 @@ mbm-wp/
 |     |-- wordpress/{{ standard Wordpress directory structure }}
 ```
 
-3. Deploy the site: `cd mbm-wp` & `gcloud app deploy` (deployment must happen in wordpress project folder i.e. where `app.yaml` if present)
+3. `cd wp_dir/wordpress`
+4. Overwrite default `wp-content` with contents of this repo
+    1. `git init`
+    2. `git remote add origin git@github.com:zemccartney/msbuskinmath.com.git`
+    3. `git pull origin master`
+5. Deploy the site: `cd mbm-wp` & `gcloud app deploy` (deployment must happen in wordpress project folder i.e. where `app.yaml` if present)
     - This can take a bit of time (few minutes or so)
 
-4. Activate the Google Storage plugin in the WP admin
+6. Activate the Google Storage plugin in the WP admin
     - This plugin comes with install; must be activated to allow uploading Media; switches media uploads from file system (which is not writable in App Engine; see https://cloud.google.com/appengine/docs/standard/php/googlestorage/ ) to Google Cloud Storage:
 https://github.com/GoogleCloudPlatform/wordpress-plugins/tree/master/appengine-plugin
 
-5. Make Google Cloud Storage bucket accessible to site, both from links and scripts
+7. Make Google Cloud Storage bucket accessible to site, both from links and scripts
     - Bucket can be made public-readable through UI: https://cloud.google.com/storage/docs/access-control/making-data-public
     - the site's [PDF Embedder Premium plugin](https://wp-pdf.com/) requests PDFs from Google Cloud Storage programmatically, which means we need to configure CORS on the bucket. We do this
     by creating a CORS configuration JSON file, then setting it on the bucket
