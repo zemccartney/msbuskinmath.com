@@ -34,11 +34,11 @@
 		<?php endif; ?>
 		<div class="site-info-wrapper clear">
 			<?php penscratch_2_social_menu(); ?>
-			<div class="site-info">
+			<!-- <div class="site-info">
 				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'penscratch-2' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'penscratch-2' ), 'WordPress' ); ?></a>
 				<span class="sep"> ~ </span>
 				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'penscratch-2' ), 'Penscratch 2', '<a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>' ); ?>
-			</div><!-- .site-info -->
+			</div> --><!-- .site-info -->
 		</div><!-- .site-info-wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
