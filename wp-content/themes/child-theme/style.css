@@ -1,0 +1,26 @@
+/*
+Theme Name: Blockquote modification
+Template: twentyfifteen
+*/
+
+@import "../twentyfifteen/style.css";
+
+blockquote {
+  font-size: 1.75rem;
+  background-color: #7bbdbf;
+  padding: 3rem;
+  margin-left: -13%;
+  margin-right: -13%;
+}
+
+.site-title a {
+  font-family: "Noto Serif", serif;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+blockquote > p {
+  font-size: inherit;
+}
